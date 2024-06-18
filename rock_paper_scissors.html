@@ -19,12 +19,14 @@
     //2 => Paper
     //3 => Scissors
     function getComputerChoice() {
-        return Math.floor(Math.random() * 3) + 1;
+        let options = ["ROCK", "PAPER", "SCISSORS"];
+        let choice = Math.floor(Math.random() * 3);
+        console.log(options[choice]);
     }
 
     //Function that prompts user for their choice.
     function getUserChoice() {
-        let choice = prompt("Make your choice: ");
+        let choice = prompt("Make your choice (Rock / Paper / Scissors): ");
     }
 
 </script>
