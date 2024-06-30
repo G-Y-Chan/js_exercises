@@ -9,3 +9,6 @@ function addDiv() {
 
     container.appendChild(newDiv);
 }
+
+const addDivButton = document.querySelector("#btn");
+addDivButton.addEventListener("click", addDiv);
