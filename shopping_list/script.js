@@ -25,6 +25,8 @@ function addItem() {
     newListItem.appendChild(deleteButton);
 
     itemList.appendChild(newListItem);
+
+    deleteButton.addEventListener("click", () => itemList.removeChild(newListItem));
 }
 
 addItemButton.addEventListener("click", addItem);
