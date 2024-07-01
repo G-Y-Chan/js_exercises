@@ -26,3 +26,5 @@ function addItem() {
 
     itemList.appendChild(newListItem);
 }
+
+addItemButton.addEventListener("click", addItem);
