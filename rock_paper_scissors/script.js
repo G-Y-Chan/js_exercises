@@ -2,6 +2,12 @@
 let userScore = 0;
 let computerScore = 0;
 
+//Function to update score in .score div
+function updateScore() {
+    const scoreDiv = document.querySelector(".score");
+    scoreDiv.textContent = `${computerScore}:${userScore}`;
+}
+
 //Function that returns a random integer from 1 to 3 inclusive.
 //Return value represents computer's choice
 //1 => Rock
