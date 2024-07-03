@@ -8,3 +8,23 @@ div button {
     width: 96px;
     height: 32px;
 }
+
+.computerName {
+    display: flex;
+    align-items: center;
+    width: 144px;
+    height: 48px;
+    background-color: aqua;
+    color: blue;
+    border-radius: 12px 0 0 12px;
+}
+
+.userName {
+    display: flex;
+    align-items: center;
+    width: 144px;
+    height: 48px;
+    background-color: aqua;
+    color: blue;
+    border-radius: 0 12px 12px 0;
+}
