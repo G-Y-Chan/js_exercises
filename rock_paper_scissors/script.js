@@ -65,3 +65,6 @@ function playRound(userChoice, computerChoice) {
     //Output scores in console
     console.log("Your score: " + userScore + " | Computer score: " + computerScore);
 }
+
+//Initialise score in UI
+updateScore();
