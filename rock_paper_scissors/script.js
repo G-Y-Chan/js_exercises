@@ -68,3 +68,11 @@ function playRound(userChoice, computerChoice) {
 
 //Initialise score in UI
 updateScore();
+
+//Adding event listeners to selection buttons
+const rockButton = document.querySelector("#rock");
+rockButton.addEventListener("click", () => playRound("ROCK", getComputerChoice()));
+const paperButton = document.querySelector("#paper");
+paperButton.addEventListener("click", () => playRound("PAPER", getComputerChoice()));
+const scissorsButton = document.querySelector("#scissors");
+scissorsButton.addEventListener("click", () => playRound("SCISSORS", getComputerChoice()));
