@@ -37,28 +37,35 @@ function playRound(userChoice, computerChoice) {
     //Output result of round in console
     if (userChoice === computerChoice) {
         console.log("Its a tie!");
+        displayResults(userChoice, computerChoice, "TIE");
     } else if (userChoice === "ROCK") {
         if (computerChoice === "PAPER") {
             console.log("You lose! Paper beats Rock!");
+            displayResults(userChoice, computerChoice, "LOSE");
             computerScore += 1;
         } else {
             console.log("You win! Rock beats Scissors!");
+            displayResults(userChoice, computerChoice, "WIN");
             userScore += 1;
         }
     } else if (userChoice === "PAPER") {
         if (computerChoice === "ROCK") {
             console.log("You win! Paper beats Rock!");
+            displayResults(userChoice, computerChoice, "WIN");
             userScore += 1;
         } else {
             console.log("You lose! Scissors beats Paper!");
+            displayResults(userChoice, computerChoice, "LOSE");
             computerScore += 1;
         }
     } else if (userChoice === "SCISSORS") {
         if (computerChoice === "PAPER") {
             console.log("You win! Scissors beats Paper!");
+            displayResults(userChoice, computerChoice, "WIN");
             userScore += 1;
         } else {
             console.log("You lose! Rock beats Scissors!");
+            displayResults(userChoice, computerChoice, "LOSE");
             computerScore += 1;
         }
     }
@@ -68,6 +75,9 @@ function playRound(userChoice, computerChoice) {
 
 function displayResults(userChoice, computerChoice, result) {
     const resultsDiv = document.querySelector("#results");
+    if (resultsDiv.firstChild) {
+        resultsDiv.removeChild(resultsDiv.lastChild);
+    }
 
     const newResults = document.createElement("div");
     newResults.style.display = "flex";
