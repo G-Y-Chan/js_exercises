@@ -2,3 +2,8 @@ div {
     display: flex;
     justify-content: center;
 }
+
+div button {
+    width: 96px;
+    height: 32px;
+}
