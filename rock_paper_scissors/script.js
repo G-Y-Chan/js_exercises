@@ -6,6 +6,22 @@ let computerScore = 0;
 function updateScore() {
     const scoreDiv = document.querySelector(".score");
     scoreDiv.textContent = `${computerScore}:${userScore}`;
+    if (userScore == 5) {
+        alert("You have reached 5 points. Game over.");
+        userScore = 0;
+        computerScore = 0;
+        updateScore();
+        const resultsDiv = document.querySelector("#results");
+        resultsDiv.removeChild(resultsDiv.lastChild);
+    }
+    if (computerScore == 5) {
+        alert("Computer has reached 5 points. Game over.");
+        userScore = 0;
+        computerScore = 0;
+        updateScore();
+        const resultsDiv = document.querySelector("#results");
+        resultsDiv.removeChild(resultsDiv.lastChild);
+    }
 }
 
 //Function that returns a random integer from 1 to 3 inclusive.
