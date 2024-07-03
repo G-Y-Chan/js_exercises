@@ -28,3 +28,20 @@ div button {
     color: blue;
     border-radius: 0 12px 12px 0;
 }
+
+.score {
+    display: flex;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    background-color: blue;
+    color: aqua;
+    border-radius: 16px
+}
+
+#scoreboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
