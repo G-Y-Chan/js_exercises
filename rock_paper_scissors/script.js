@@ -66,6 +66,40 @@ function playRound(userChoice, computerChoice) {
     updateScore();
 }
 
+function displayResults(userChoice, computerChoice, result) {
+    const resultsDiv = document.querySelector("#results");
+
+    const newResults = document.createElement("div");
+    newResults.style.display = "flex";
+    newResults.style.flexDirection = "column";
+
+    const resultsHeading = document.createElement("h1");
+    resultsHeading.textContent = "RESULTS";
+    resultsHeading.style.textDecoration = "underline";
+    resultsHeading.style.marginBottom = 0;
+    newResults.appendChild(resultsHeading);
+
+    const computerChoiceLine = document.createElement("div");
+    computerChoiceLine.textContent = "Computer's choice: " + computerChoice;
+    newResults.appendChild(computerChoiceLine);
+
+    const userChoiceLine = document.createElement("div");
+    userChoiceLine.textContent = "Your choice: " + userChoice;
+    newResults.appendChild(userChoiceLine);
+
+    const finalResultLine = document.createElement("div");
+    if (result == "TIE") {
+        finalResultLine.textContent = "Its a tie!";
+    } else if (result == "WIN") {
+        finalResultLine.textContent = "You win!";
+    } else {
+        finalResultLine.textContent = "You lose!";
+    }
+    newResults.appendChild(finalResultLine);
+    
+    resultsDiv.appendChild(newResults);
+}
+
 //Initialise score in UI
 updateScore();
 
