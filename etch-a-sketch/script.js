@@ -38,3 +38,8 @@ function getUserInput() {
     let numSquares = prompt("Enter number of squares: ");
     createNewCanvas(numSquares);
 }
+
+//Function to change the color of grid squares
+function colorSquare(square) {
+    square.style.backgroundColor = "#313638";
+}
