@@ -32,3 +32,9 @@ function createNewCanvas(numSquares) {
     }
     createCanvas(numSquares);
 }
+
+//Function to ask user for number of squares per side
+function getUserInput() {
+    let numSquares = prompt("Enter number of squares: ");
+    createNewCanvas(numSquares);
+}
