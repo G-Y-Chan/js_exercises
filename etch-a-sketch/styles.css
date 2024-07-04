@@ -1,7 +1,7 @@
 #container {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    gap: 1px;
     height: 90vh;
     width: 90vw;
 }
