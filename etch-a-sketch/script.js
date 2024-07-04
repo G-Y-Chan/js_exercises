@@ -1,4 +1,4 @@
-function create(numSquares) {
+function createCanvas(numSquares) {
     const container = document.querySelector("#container");
     for (i = 0; i < numSquares; i++) {
         const newRow = document.createElement("div");
