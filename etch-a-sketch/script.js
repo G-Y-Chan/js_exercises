@@ -1,3 +1,4 @@
+let mouseDown = false;
 function createCanvas(numSquares) {
     const container = document.querySelector("#container");
     for (i = 0; i < numSquares; i++) {
@@ -9,6 +10,7 @@ function createCanvas(numSquares) {
             const newGridSquare = document.createElement("div");
             newGridSquare.classList.add("gridSquare");
             newGridSquare.style.backgroundColor = "lightgrey";
+            newGridSquare.addEventListener("mouseover", () => colorSquare(newGridSquare));
             newGridSquare.style.height = `${80/numSquares}vh`;
             newGridSquare.style.width = `${80/numSquares}vh`;
             newRow.appendChild(newGridSquare);
@@ -41,5 +43,14 @@ function getUserInput() {
 
 //Function to change the color of grid squares
 function colorSquare(square) {
-    square.style.backgroundColor = "#313638";
+    if (mouseDown) square.style.backgroundColor = "#313638";
 }
+
+//Add event listener to container div
+const container = document.querySelector("#container");
+container.addEventListener("mousedown", () => {
+    mouseDown = true;
+});
+container.addEventListener("mouseup", () => {
+    mouseDown = false;
+});
