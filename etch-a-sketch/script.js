@@ -41,7 +41,7 @@ function getUserInput() {
     createNewCanvas(numSquares);
 }
 
-//Function to change the color of grid squares
+//Function to change the color of grid squaresg
 function colorSquare(square) {
     if (mouseDown) square.style.backgroundColor = "#313638";
 }
@@ -54,3 +54,7 @@ container.addEventListener("mousedown", () => {
 container.addEventListener("mouseup", () => {
     mouseDown = false;
 });
+
+//Add event listener to create button
+const createButton = document.querySelector("#createButton");
+createButton.addEventListener("click", getUserInput);
