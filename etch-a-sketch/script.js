@@ -16,3 +16,10 @@ function createCanvas(numSquares) {
         container.appendChild(newRow);
     }
 }
+
+//Initialise a 16x16 canvas when page first loads
+function init() {
+    createCanvas(16);
+}
+
+init();
