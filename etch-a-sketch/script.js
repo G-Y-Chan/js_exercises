@@ -9,8 +9,8 @@ function createCanvas(numSquares) {
             const newGridSquare = document.createElement("div");
             newGridSquare.classList.add("gridSquare");
             newGridSquare.style.backgroundColor = "lightgrey";
-            newGridSquare.style.height = `${90/numSquares}vh`;
-            newGridSquare.style.width = `${90/numSquares}vh`;
+            newGridSquare.style.height = `${80/numSquares}vh`;
+            newGridSquare.style.width = `${80/numSquares}vh`;
             newRow.appendChild(newGridSquare);
         }
         container.appendChild(newRow);
@@ -23,3 +23,12 @@ function init() {
 }
 
 init();
+
+//Function to create new canvas
+function createNewCanvas(numSquares) {
+    const container = document.querySelector("#container");
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
+    createCanvas(numSquares);
+}
