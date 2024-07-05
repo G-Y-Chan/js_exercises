@@ -33,6 +33,12 @@ console.table(born_in_1500);
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
+const firstNames = inventors.map(inventor => inventor.first);
+const lastNames = inventors.map(inventor => inventor.last);
+const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+console.log(firstNames);
+console.log(lastNames);
+console.log(fullNames);
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
