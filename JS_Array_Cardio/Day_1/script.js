@@ -74,3 +74,12 @@ console.table(sortedPeople);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];  
+const summedData = data.reduce((obj, curr) => {
+    if (obj[curr]) {
+        obj[curr] += 1;
+    } else {
+        obj[curr] = 1;
+    }
+    return obj;
+}, {});
