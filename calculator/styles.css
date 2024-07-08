@@ -1,9 +1,10 @@
 .calculatorBody {
     border-radius: 12px;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(200, 200, 200);
     height: 80vh;
     width: 30vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
