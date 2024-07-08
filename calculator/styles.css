@@ -1,6 +1,8 @@
 .calculatorBody {
     border-radius: 12px;
-    background-color: grey;
+    background-color: rgb(50, 50, 50);
     height: 80vh;
     width: 30vw;
+    display: flex;
+    justify-content: center;
 }
