@@ -12,3 +12,8 @@ function subtract(a, b) {
 function multiply(a, b) {
     return a * b;
 }
+
+//Function to divide one number by another
+function divide(a, b) {
+    return a/b;
+}
