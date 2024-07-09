@@ -35,3 +35,14 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+.button {
+    background-color: aliceblue;
+    height: 8vh;
+    width: 6vw;
+    border-radius: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vh;
+}
