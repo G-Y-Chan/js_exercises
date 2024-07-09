@@ -42,3 +42,24 @@ function operate(opr, operand1, operand2) {
 //Default display for calculator
 const display = document.querySelector(".display");
 display.textContent = "0";
+
+/*
+Logic flow for displayNum() function
+1. Append new numbers to num1 unless an operator was pressed
+2. In that case append new numbers to num2
+*/
+function displayNum(button) {
+    if (num1 === undefined) {
+        num1 = button.textContent;
+        display.textContent = num1;
+    } else if (operator === undefined) {
+        num1 += button.textContent;
+        display.textContent = num1;
+    } else if (num2 === undefined) {
+        num2 = button.textContent;
+        display.textContent = num2;
+    } else {
+        num2 += button.textContent;
+        display.textContent = num2;
+    }
+}
