@@ -67,3 +67,69 @@ function displayNum(button) {
 //Event listeners for number buttons
 const numberButtons = document.querySelectorAll(".number");
 numberButtons.forEach(button => button.addEventListener("click", () => displayNum(button)));
+
+/*
+Function to be called when an operator button is pressed
+1. If num1 is not initialised, ignore
+2. Else if num2 is not initialised, store new operator in opr variable
+3. Else, call operate function and store result to num1 and display result
+*/
+function newOpr(button) {
+    console.log('test');
+    if (num1 === undefined) {
+        return;
+    } else if (num2 === undefined) {
+        switch(button.textContent) {
+            case "+":
+                operator = "add";
+                break;
+            case "-":
+                operator = "subtract";
+                break;
+            case "*":
+                operator = "multiply";
+                break;
+            case "/":
+                operator = "divide";
+                break;
+        }
+    } else {
+        let res = operate(operator, num1, num2);
+        //We can guarantee that num1 and num2 are numbers when operate is called
+        //Thus, we only need to check for infinity
+        if (res === Number.POSITIVE_INFINITY || res === Number.NEGATIVE_INFINITY) {
+            display.textContent = "ERROR";
+            num1 = undefined;
+            num2 = undefined;
+            operator = undefined;
+        } 
+        //Number can now be safely stored and displayed
+        //Check for equal button
+        //No new operator should be stored in opr variable
+        else if (button.textContent == "=") {
+            num1 = res;
+            num2 = undefined;
+            operator = undefined;
+        }
+        //Not an equal button
+        //New operator can be stored in opr variable
+        else {
+            num1 = res;
+            num2 = undefined;
+            switch(button.textContent) {
+                case "+":
+                    operator = "add";
+                    break;
+                case "-":
+                    operator = "subtract";
+                    break;
+                case "*":
+                    operator = "multiply";
+                    break;
+                case "/":
+                    operator = "divide";
+                    break;
+            }
+        }
+    }
+}
