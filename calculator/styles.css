@@ -15,3 +15,11 @@
     width: 24vw;
     margin: 3vw;
 }
+
+.buttonContainer {
+    background-color: grey;
+    height: 54vh;
+    width: 30vw;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
