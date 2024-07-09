@@ -132,3 +132,7 @@ function newOpr(button) {
         }
     }
 }
+
+//Event listeners for number buttons
+const operatorButtons = document.querySelectorAll(".operator");
+operatorButtons.forEach(button => button.addEventListener("click", () => newOpr(button)));
