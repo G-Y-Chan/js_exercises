@@ -75,7 +75,6 @@ Function to be called when an operator button is pressed
 3. Else, call operate function and store result to num1 and display result
 */
 function newOpr(button) {
-    console.log('test');
     if (num1 === undefined) {
         return;
     } else if (num2 === undefined) {
