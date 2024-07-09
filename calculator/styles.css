@@ -12,8 +12,11 @@
     border-radius: 6px;
     background-color: grey;
     height: 20vh;
-    width: 24vw;
+    width: 28vw;
     margin: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 16vh;
 }
 
 .buttonContainer {
