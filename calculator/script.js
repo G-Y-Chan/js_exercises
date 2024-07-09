@@ -38,3 +38,7 @@ function operate(opr, operand1, operand2) {
             return 0;
     }
 }
+
+//Default display for calculator
+const display = document.querySelector(".display");
+display.textContent = "0";
