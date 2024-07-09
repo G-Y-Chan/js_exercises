@@ -41,7 +41,7 @@ function operate(opr, operand1, operand2) {
 
 //Default display for calculator
 const display = document.querySelector(".display");
-display.textContent = "0";
+display.textContent = 0;
 
 /*
 Logic flow for displayNum() function
@@ -107,6 +107,7 @@ function newOpr(button) {
         //No new operator should be stored in opr variable
         else if (button.textContent == "=") {
             num1 = res;
+            display.textContent = res;
             num2 = undefined;
             operator = undefined;
         }
@@ -114,6 +115,7 @@ function newOpr(button) {
         //New operator can be stored in opr variable
         else {
             num1 = res;
+            display.textContent = res;
             num2 = undefined;
             switch(button.textContent) {
                 case "+":
