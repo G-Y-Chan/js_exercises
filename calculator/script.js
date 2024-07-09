@@ -63,3 +63,7 @@ function displayNum(button) {
         display.textContent = num2;
     }
 }
+
+//Event listeners for number buttons
+const numberButtons = document.querySelectorAll(".number");
+numberButtons.forEach(button => button.addEventListener("click", () => displayNum(button)));
