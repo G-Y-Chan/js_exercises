@@ -26,6 +26,7 @@ function divide(a, b) {
 
 //Function that calls one of the above function
 function operate(opr, operand1, operand2) {
+    finishedOperation = true;
     switch(opr) {
         case "add":
             return add(operand1, operand2);
