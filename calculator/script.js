@@ -149,3 +149,7 @@ function clearDisplay() {
     operator = undefined;
     display.textContent = 0;
 }
+
+//Event listener for clear button
+const clearButton = document.querySelector(".clearButton");
+clearButton.addEventListener("click", clearDisplay);
