@@ -2,6 +2,7 @@
 let num1;
 let num2;
 let operator;
+let finishedOperation = false;
 
 //Function to add two numbers
 function add(a, b) {
