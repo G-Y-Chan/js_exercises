@@ -5,22 +5,22 @@ let operator;
 
 //Function to add two numbers
 function add(a, b) {
-    return a + b;
+    return Number(a) + Number(b);
 }
 
 //Function to subtract one number from another
 function subtract(a, b) {
-    return a - b;
+    return Number(a) - Number(b);
 }
 
 //Function to multiply two numbers
 function multiply(a, b) {
-    return a * b;
+    return Number(a) * Number(b);
 }
 
 //Function to divide one number by another
 function divide(a, b) {
-    return a/b;
+    return Number(a)/Number(b);
 }
 
 //Function that calls one of the above function
