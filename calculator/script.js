@@ -51,9 +51,10 @@ Logic flow for displayNum() function
 2. In that case append new numbers to num2
 */
 function displayNum(button) {
-    if (num1 === undefined) {
+    if (finishedOperation || num1 === undefined) {
         num1 = button.textContent;
         display.textContent = num1;
+        finishedOperation = false;
     } else if (operator === undefined) {
         num1 += button.textContent;
         display.textContent = num1;
