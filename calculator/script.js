@@ -27,7 +27,9 @@ function multiply(a, b) {
 
 //Function to divide one number by another
 function divide(a, b) {
-    return Number(a)/Number(b);
+    a = Number(a);
+    b = Number(b);
+    return a / b;
 }
 
 //Function that calls one of the above function
