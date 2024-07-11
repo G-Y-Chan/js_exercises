@@ -117,6 +117,7 @@ function newOpr(button) {
         //Not an equal button
         //New operator can be stored in opr variable
         else {
+            finishedOperation = false;
             num1 = res;
             display.textContent = res;
             num2 = undefined;
