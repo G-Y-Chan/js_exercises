@@ -6,7 +6,9 @@ let finishedOperation = false;
 
 //Function to add two numbers
 function add(a, b) {
-    return Number(a) + Number(b);
+    a = Number(a);
+    b = Number(b);
+    return a + b;
 }
 
 //Function to subtract one number from another
