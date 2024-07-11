@@ -13,7 +13,9 @@ function add(a, b) {
 
 //Function to subtract one number from another
 function subtract(a, b) {
-    return Number(a) - Number(b);
+    a = Number(a);
+    b = Number(b);
+    return a - b;
 }
 
 //Function to multiply two numbers
