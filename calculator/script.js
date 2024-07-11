@@ -20,7 +20,9 @@ function subtract(a, b) {
 
 //Function to multiply two numbers
 function multiply(a, b) {
-    return Number(a) * Number(b);
+    a = Number(a);
+    b = Number(b);
+    return a * b;
 }
 
 //Function to divide one number by another
