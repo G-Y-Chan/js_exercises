@@ -59,18 +59,15 @@ Logic flow for displayNum() function
 2. In that case append new numbers to num2
 */
 function displayNum(button) {
-    if (finishedOperation || num1 === undefined) {
+    if (finishedOperation) {
         num1 = button.textContent;
         display.textContent = num1;
         finishedOperation = false;
     } else if (operator === undefined) {
-        num1 += button.textContent;
+        num1 = num1===undefined ? button.textContent : num1+button.context;
         display.textContent = num1;
-    } else if (num2 === undefined) {
-        num2 = button.textContent;
-        display.textContent = num2;
     } else {
-        num2 += button.textContent;
+        num2 = num2===undefined ? button.textContent : num2+button.context;
         display.textContent = num2;
     }
 }
@@ -121,6 +118,7 @@ function newOpr(button) {
             display.textContent = res;
             num2 = undefined;
             operator = undefined;
+            finishedOperation = true;
         }
         //Not an equal button
         //New operator can be stored in opr variable
