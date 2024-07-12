@@ -175,3 +175,7 @@ function negate() {
         display.textContent = num2;
     }
 }
+
+//Event listener for negate button
+const negateButton = document.querySelector(".negateButton");
+negateButton.addEventListener("click", negate);
