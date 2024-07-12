@@ -162,3 +162,16 @@ function clearDisplay() {
 //Event listener for clear button
 const clearButton = document.querySelector(".clearButton");
 clearButton.addEventListener("click", clearDisplay);
+
+//Function to negate operands
+function negate() {
+    if (num1 === undefined) {
+        return;
+    } else if (operator === undefined) {
+        num1 = 0 - Number(num1);
+        display.textContent = num1;
+    } else {
+        num2 = 0 - Number(num2);
+        display.textContent = num2;
+    }
+}
